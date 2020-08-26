@@ -1,0 +1,6 @@
+.App {
+  text-align: center;
+  background: rgb(63,251,219);
+  background: radial-gradient(circle, rgba(63,251,219,0.1110819327731093) 0%, rgba(70,231,252,1) 75%);
+}
+
