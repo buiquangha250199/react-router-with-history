@@ -1,13 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 import './css/tailwind.min.css'
-import App from './App';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import App from './App'
+import {renderRoutes} from 'react-router-config';
+import {BrowserRouter} from 'react-router-dom';
+import rootReducer from './reducers'
+import routes from './routes'
+
+const store = createStore(rootReducer)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      {renderRoutes(routes)}
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

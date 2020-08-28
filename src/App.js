@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import LoginForm from './components/loginForm/login';
+import {renderRoutes} from 'react-router-config';
 
-function App() {
+function App({route}) {
   return (
     <div className="App h-screen flex justify-center items-center bg-gray-200">
-      <LoginForm />
+      {renderRoutes(route.routes)}
     </div>
   );
 }
