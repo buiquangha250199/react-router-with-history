@@ -1,13 +1,17 @@
-const login = (state = [], action) => {
+const initalState = {
+    email : "",
+    password : ""
+}
+
+const login = (state = initalState, action) => {
     switch (action.type) {
         case 'LOGIN':
-            return [
+            console.log(action)
+            return {
                 ...state,
-                {
-                    email: action.email,
-                    password: action.password
-                }
-            ]
+                email: action.email,
+                password: action.password
+            }
         default: 
             return state
     }

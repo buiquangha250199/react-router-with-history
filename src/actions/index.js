@@ -1,5 +1,8 @@
 export const login = (email, password) => ({
     type: "LOGIN",
-    email,
-    password
+    payload: {
+        email: email,
+        password: password
+    }
 })
+
