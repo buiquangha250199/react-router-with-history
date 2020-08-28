@@ -1,6 +1,5 @@
 const initalState = {
-    email : "",
-    password : ""
+    status: 'No login'
 }
 
 const login = (state = initalState, action) => {
@@ -9,8 +8,7 @@ const login = (state = initalState, action) => {
             console.log(action)
             return {
                 ...state,
-                email: action.email,
-                password: action.password
+                status: 'Try to Login'
             }
         default: 
             return state

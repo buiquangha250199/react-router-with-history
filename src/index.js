@@ -4,7 +4,6 @@ import './index.css'
 import './css/tailwind.min.css'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import App from './App'
 import {renderRoutes} from 'react-router-config';
 import {BrowserRouter} from 'react-router-dom';
 import rootReducer from './reducers'
