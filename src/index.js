@@ -2,14 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import './css/tailwind.min.css'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import {renderRoutes} from 'react-router-config';
 import {BrowserRouter} from 'react-router-dom';
 import rootReducer from './reducers'
 import routes from './routes'
+import thunk from 'redux-thunk'
 
-const store = createStore(rootReducer)
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk)
+)
 
 ReactDOM.render(
   <Provider store={store}>

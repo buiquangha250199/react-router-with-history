@@ -4,11 +4,11 @@ const initalState = {
 
 const login = (state = initalState, action) => {
     switch (action.type) {
-        case 'LOGIN':
+        case 'LOGIN_SUCCEEDED':
             console.log(action)
             return {
                 ...state,
-                status: 'Try to Login'
+                status: 'Login'
             }
         default: 
             return state
