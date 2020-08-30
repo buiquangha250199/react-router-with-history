@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
 import  * as actions  from '../../actions'
 import LoginForm from '../../components/formLogin'
-// import Footer from '../../components/footer'
 
 const mapStateToProps = (state, ownProps) => ({
   
@@ -13,4 +12,7 @@ const mapStateToProps = (state, ownProps) => ({
     }
   })
 
-export default connect(mapStateToProps,mapDispatchToProps)(LoginForm)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginForm);

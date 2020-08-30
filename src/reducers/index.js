@@ -8,7 +8,13 @@ const login = (state = initalState, action) => {
             console.log(action)
             return {
                 ...state,
-                status: 'Login'
+                status: 'Login ok!'
+            }
+        case 'LOGOUT':
+            console.log(action)
+            return {
+                ...state,
+                status: 'Logout!'
             }
         default: 
             return state
